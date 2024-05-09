@@ -1,6 +1,8 @@
 body {
   margin: 0;
   background-color: #eee;
+  --base-font-family: -apple-system, BlinkMacSystemFont, "NanumBarunGothic",
+    system-ui, sans-serif;
 }
 li {
   list-style-type: none;
@@ -14,10 +16,6 @@ li {
   height: 100%;
   box-sizing: border-box;
 }
-svg {
-  width: 20px;
-  fill: red;
-}
 #container_kim .top_kim {
   display: flex;
   justify-content: center;
@@ -27,17 +25,153 @@ svg {
 #container_kim .top_kim .topCenter_kim {
   display: flex;
   width: 80rem;
-  margin: auto;
+  margin: 0 auto;
   justify-content: space-between;
+  align-items: center;
 }
 #container_kim .top_kim .topCenter_kim .topLeft_kim {
   padding-left: 1rem;
+  position: relative;
 }
+
 #container_kim .top_kim .topCenter_kim .topRight_kim {
   padding-right: 1rem;
 }
-#container_kim .top_kim .topCenter_kim .topRight_kim::after {
+#container_kim .top_kim .topCenter_kim .topLeft_kim .inline_kim,
+#container_kim .top_kim .topCenter_kim .topRight_kim .inline_kim {
+  display: inline-block;
+}
+#container_kim .top_kim .topCenter_kim .topLeft_kim .logo-img_kim {
+  transform: translateY(5px);
+}
+#container_kim .top_kim .topCenter_kim .topLeft_kim span,
+#container_kim .top_kim .topCenter_kim .topRight_kim .inline_kim a {
+  display: inline-block;
+  font-size: 0.92rem;
+  padding: 0rem 0rem 0rem 0.8rem;
+  font-size: 15px;
+  color: white;
+  text-decoration: none;
+}
+#container_kim .top_kim .topCenter_kim .topLeft_kim span {
+  padding-top: 1.5rem;
+}
+#container_kim .top_kim .topCenter_kim .topLeft_kim .space_kim {
+  padding-left: 0.15rem;
+}
+#container_kim .top_kim .topCenter_kim .topLeft_kim .space_kim::after {
+  display: inline-block;
+  content: "";
+  height: 0px;
+  width: 0px;
+  border: 4px solid white;
+  margin-left: 7px;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+#container_kim
+  .top_kim
+  .topCenter_kim
+  .topLeft_kim
+  .inline_kim
+  form
+  .inline_kim {
+  position: relative;
+}
+#container_kim
+  .top_kim
+  .topCenter_kim
+  .topLeft_kim
+  .inline_kim
+  form
+  .inline_kim
+  .search-img_kim::before {
+  content: "\f21f";
+  background-color: black;
+  position: absolute;
+  top: 5;
+  right: 0;
+  bottom: 0;
+  left: 25;
+  width: 18px;
+  height: 60%;
+}
+#container_kim
+  .top_kim
+  .topCenter_kim
+  .topLeft_kim
+  .inline_kim
+  form
+  .inline_kim
+  input {
+  height: 75%;
+  font-size: 1rem;
+  width: 18rem;
+  padding: 0;
+  padding-left: 2rem;
+  border: 0;
+  margin: 0;
+  color: white;
+  background-color: black;
+  outline: none;
+  border: 2px solid black;
+  transition: 1s border;
+  border-radius: 5px;
+}
+#container_kim
+  .top_kim
+  .topCenter_kim
+  .topLeft_kim
+  .inline_kim
+  form
+  .inline_kim
+  input:focus {
+  border: 2px solid aqua;
+  transition: 1s border;
+}
+#container_kim
+  .top_kim
+  .topCenter_kim
+  .topRight_kim
+  .inline_kim
+  a
+  .person-img_kim::before {
   content: "\f213";
+}
+#container_kim
+  .top_kim
+  .topCenter_kim
+  .topLeft_kim
+  .inline_kim
+  form
+  .chanelSelect_kim {
+  width: 18rem;
+  position: absolute;
+  top: 40;
+  right: 0;
+  bottom: 0;
+  left: 20;
+  border-radius: 5px;
+  border: 1px solid #3d414d;
+  height: fit-content;
+  background-color: white;
+}
+#container_kim
+  .top_kim
+  .topCenter_kim
+  .topLeft_kim
+  .inline_kim
+  form
+  .chanelSelect_kim
+  div {
+  display: flex;
+  padding-left: 10px;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  color: black;
+  height: 3rem;
 }
 #container_kim .subTop_kim {
   height: 1.7rem;
