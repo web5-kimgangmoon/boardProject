@@ -10,16 +10,21 @@
 <body>
   <div id="container">
     <div class="top">
+      <div class="configMenuBox" style="position: absolute;">
+        <div class="out"></div>
+        <div class="out"></div>
+      </div>
       <div class="topCenter">
         <div class="topLeft">
-          <a href="/" class="logo-img inline">
+          <a href="/" class="logo-img">
             <img src="./../../imgs/Arcalive_logo.svg" width="26px" height="26px">
           </a>
-          <div class="inline">
-            <div class="inline chanelSelectorButton" title="구독 채널">
-              <span>구독&nbsp;</span><span class="arrowBottom">채널</span>
+          <div class="subscribeChanel">
+            <div class="chanelSelectorButton" title="구독 채널">
+              <span>구독&nbsp;</span><span>채널</span>
+              <div class="arrowButton"></div>
             </div>
-            <div class="chanelBox">
+            <div class="chanelBox out">
               <div class="chanelList"><a href="/">유머 채널</a></div>
               <div class="chanelList"><a href="/">유머 채널</a></div>
               <div class="chanelList"><a href="/">유머 채널</a></div>
@@ -27,61 +32,86 @@
               <div class="chanelList"><a href="/">유머 채널</a></div>
             </div>
           </div>
-          <div class="inline">
-            <div class="inline chanelSelectorButton" title="채널">
-              <span>주요&nbsp;</span><span class="arrowBottom">채널</span>
+          <div class="primaryChanel">
+            <div class="chanelSelectorButton" title="채널">
+              <span>주요&nbsp;</span><span>채널</span>
+              <div class="arrowButton"></div>
             </div>
             <div class="chanelBox out">
-              <div class="chanelList">dd</div>
+              <div class="chanelList">
+                <div class="chanelList"><a href="/">유머 채널</a></div>
+                <div class="chanelList"><a href="/">유머 채널</a></div>
+                <div class="chanelList"><a href="/">유머 채널</a></div>
+                <div class="chanelAreaLiner"></div>
+                <div class="chanelList"><a href="/">유머 채널</a></div>
+              </div>
             </div>
           </div>
-          <div class="inline">
-            <span></span>
-            <div class="inline">
-              <div class="search-img"><img src="./../../imgs/searchImg.png" /></div>
-              <input type="search" name="chanelName" placeholder="찾기" autocomplete="off" />
-              <div class="inline chanelSelect out">
-                <!-- <div class="chanelList">
+          <div class="searchBox">
+            <div class="search-img"><img src="./../../imgs/searchImg.png" /></div>
+            <input type="search" name="chanelName" placeholder="찾기" autocomplete="off" />
+            <div class="chanelSelect out">
+              <!-- <div class="chanelList">
                   <div class="no-search">채널 검색 결과가 없습니다.</div>
                 </div> -->
-                <div class="chanelList">
-                  <a href="/">
-                    <img class="logo" src="./../../imgs/Arcalive_logo.svg" />
-                    <span>암니안ㅁ어ㅣ마넝ㄴ머</span>
-                    <img class="playImg" src="./../../imgs/playShape.png" />
-                  </a>
-                </div>
-                <div class="chanelList"><a href="/"><img class="logo" src="./../../imgs/Arcalive_logo.svg" /><span>암니안ㅁ어ㅣ마넝ㄴ머</span><img class="playImg" src="./../../imgs/playShape.png" /></a></div>
-                <div class="bottomChanelSelect">
-                  <div class="chanelSearchButtonLine"><a href="/"><span>"d"</span>검색 결과 이동...</a></div>
-                  <div class="chanelcloseButtonLine">
-                    <div id="chanelSearchCloseButton">닫기</div>
-                  </div>
-                </div>
+              <div class="chanelList">
+                <a href="/">
+                  <img class="logo" src="./../../imgs/Arcalive_logo.svg" />
+                  <span>암니안ㅁ어ㅣ마넝ㄴ머</span>
+                  <img class="playImg" src="./../../imgs/playShape.png" />
+                </a>
+              </div>
+              <div class="chanelList"><a href="/"><img class="logo" src="./../../imgs/Arcalive_logo.svg" /><span>암니안ㅁ어ㅣ마넝ㄴ머</span><img class="playImg" src="./../../imgs/playShape.png" /></a></div>
+              <div class="bottomChanelLiner"></div>
+              <div class="chanelSearchButtonLine"><a href="/"><span>"d"</span>검색 결과 이동...</a></div>
+              <div class="chanelcloseButtonLine">
+                <div id="chanelSearchCloseButton">닫기</div>
               </div>
             </div>
           </div>
         </div>
         <div class="topRight">
-          <div class="inline">
+          <div class="topEtc">
             <a href=""><span>뉴스</span></a>
             <a href=""><span>위키</span></a>
           </div>
-          <div class="inline notification">
-            <a href="">
-              <div class="notification-img"><img src="../../imgs/notification-bell.png" /></div>
-            </a>
-            <div class="notificationBox out"></div>
+          <div class="notification">
+            <div class="notification-img"><img src="../../imgs/notification-bell.png" /></div>
+            <div class="notificationBox">
+              <div class="notificationBellTitle"><span>알림</span><button class="readAllButton">모두 읽기</button></div>
+              <div class="notificatetionMessages">
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+                <div class="newLink"><a href="/">daaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a></div>
+              </div>
+              <div class="allLook">
+                <a href="/">전체보기</a>
+              </div>
+            </div>
           </div>
-          <div class="inline login">
+          <div class="login">
             <a href="">
-              <div class="person-img"><span>초성모음이&nbsp;</span><img src="../../imgs/person.png"></div>
+              <span>
+                길이에 따라 늘어납니다&nbsp;</span>
+              <div class="person-img"><img src="../../imgs/person.png"></div>
             </a>
-            <div class="userInfoBox">
-              <div class="userName userInfoList">초성모음이</div>
-              <div class="userPoint userInfoList">10 ⓟ</div>
+            <div class="userInfoBox out">
+              <div class="userName"><a href="/"><span>길이에 따라 늘어납니다</span></a></div>
+              <div class="userPoint">10 ⓟ</div>
               <div class="userInfoListLiner"></div>
-              <div class="userInfoList">ㅇㅇ</div>
+              <div class="userInfoList"><a href="/">ㅇㅇ</a></div>
             </div>
           </div>
         </div>
@@ -151,6 +181,7 @@
         <div class="rightEndBlock"></div>
       </div>
     </div>
+
     <footer class="footer"></footer>
   </div>
 </body>

@@ -39,22 +39,66 @@ form {
   line-height: 100%;
 }
 #container .top .topCenter .topLeft {
-  padding-left: 1rem;
+  display: flex;
+  height: 100%;
+  flex: 1;
+  align-items: baseline;
+  padding-left: 0.5rem;
+}
+#container .top .topCenter .topRight {
+  padding-right: 0.5rem;
+}
+#container .top .topCenter,
+#container .top .topCenter .topLeft .subscribeChanel,
+#container .top .topCenter .topLeft .primaryChanel,
+#container .top .topCenter .topLeft .searchBox,
+#container .top .topCenter .topRight,
+#container .top .topCenter .topRight .notification .notification-img,
+#container .top .topCenter .topRight .login {
   position: relative;
+}
+#container .top .topCenter .topLeft .subscribeChanel,
+#container .top .topCenter .topLeft .subscribeChanel .chanelSelectorButton,
+#container
+  .top
+  .topCenter
+  .topLeft
+  .subscribeChanel
+  .chanelSelectorButton
+  .arrowButton,
+#container .top .topCenter .topLeft .primaryChanel,
+#container .top .topCenter .topLeft .primaryChanel .chanelSelectorButton,
+#container
+  .top
+  .topCenter
+  .topLeft
+  .primaryChanel
+  .chanelSelectorButton
+  .arrowButton,
+#container .top .topCenter .topLeft .searchBox,
+#container .top .topCenter .topLeft .searchBox .chanelSelect,
+#container .top .topCenter .topRight .topEtc,
+#container .top .topCenter .topRight .notification,
+#container .top .topCenter .topRight .notification .notification-img,
+#container .top .topCenter .topRight .login a .person-img,
+#container .top .topCenter .topRight .login {
+  display: inline-block;
 }
 
-#container .top .topCenter .topRight {
-  padding-right: 1rem;
+#container .top .topCenter .topLeft .subscribeChanel,
+#container .top .topCenter .topLeft .primaryChanel {
+  padding-left: 1rem;
 }
-#container .top .topCenter .topLeft .inline,
+/* #container .top .topCenter .topLeft .inline,
 #container .top .topCenter .topRight .inline {
   display: inline-block;
-  position: relative;
-}
+} */
 #container .top .topCenter .topLeft .logo-img {
   transform: translateY(10px);
+  padding-right: 0.4rem;
 }
-#container .top .topCenter .topLeft .inline .chanelBox {
+#container .top .topCenter .topLeft .subscribeChanel .chanelBox,
+#container .top .topCenter .topLeft .primaryChanel .chanelBox {
   position: absolute;
   top: 20;
   right: 0;
@@ -68,19 +112,26 @@ form {
   padding-bottom: 0.3rem;
   /* 임시 */
   width: 13rem;
+  min-width: max-content;
   height: fit-content;
 }
-#container .top .topCenter .topLeft .inline .chanelBox .chanelList {
-  /* background-color: red; */
-}
-#container .top .topCenter .topLeft .inline .chanelBox .chanelAreaLiner,
+#container
+  .top
+  .topCenter
+  .topLeft
+  .subscribeChanel
+  .chanelBox
+  .chanelAreaLiner,
+#container .top .topCenter .topLeft .primaryChanel .chanelBox .chanelAreaLiner,
 #container .top .topCenter .topRight .login .userInfoBox .userInfoListLiner {
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   margin-top: 0.3rem;
   padding-top: 0.3rem;
 }
-#container .top .topCenter .topLeft .inline .chanelBox .chanelList a,
-#container .top .topCenter .topRight .login .userInfoBox .userInfoList,
+#container .top .topCenter .topLeft .subscribeChanel .chanelBox .chanelList a,
+#container .top .topCenter .topLeft .primaryChanel .chanelBox .chanelList a,
+#container .top .topCenter .topRight .login .userInfoBox .userName,
+#container .top .topCenter .topRight .login .userInfoBox .userPoint,
 #container .top .topCenter .topRight .login .userInfoBox .userInfoList a {
   display: flex;
   justify-content: left;
@@ -92,55 +143,92 @@ form {
   text-decoration: none;
   color: black;
 }
-#container .top .topCenter .topLeft .inline .chanelBox .chanelList a:hover {
+#container
+  .top
+  .topCenter
+  .topLeft
+  .subscribeChanel
+  .chanelBox
+  .chanelList
+  a:hover,
+#container
+  .top
+  .topCenter
+  .topLeft
+  .primaryChanel
+  .chanelBox
+  .chanelList
+  a:hover,
+#container .top .topCenter .topRight .login .userInfoBox .userInfoList a:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-
-#container .top .topCenter .topLeft span,
-#container .top .topCenter .topRight .inline a {
+#container .top .topCenter .topLeft span {
+  font-size: 0.92rem;
+  font-size: 15px;
+  color: white;
+}
+#container .top .topCenter .topRight .topEtc a,
+#container .top .topCenter .topRight .login a {
   display: inline-block;
   font-size: 0.92rem;
   padding: 0rem 0rem 0rem 0.8rem;
   font-size: 15px;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
-#container .top .topCenter .topLeft .arrowBottom {
-  padding-left: 0;
-}
-#container .top .topCenter .topLeft .arrowBottom::after {
+#container
+  .top
+  .topCenter
+  .topLeft
+  .subscribeChanel
+  .chanelSelectorButton
+  .arrowButton::after,
+#container
+  .top
+  .topCenter
+  .topLeft
+  .primaryChanel
+  .chanelSelectorButton
+  .arrowButton::after {
   display: inline-block;
   content: "";
   height: 0px;
   width: 0px;
   border: 4px solid white;
-  margin-left: 7px;
+  margin-left: 0.3rem;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
   border-bottom: 4px solid transparent;
 }
-
-#container .top .topCenter .topLeft .inline .inline {
-  position: relative;
-}
-#container .top .topCenter .topLeft .inline .chanelSelectorButton {
+#container .top .topCenter .topLeft .subscribeChanel .chanelSelectorButton,
+#container .top .topCenter .topLeft .primaryChanel .chanelSelectorButton {
   cursor: pointer;
 }
-#container .top .topCenter .topLeft .inline .inline .search-img img {
-  content: "";
-  filter: invert(1);
+#container .top .topCenter .topLeft .searchBox {
+  flex: 1;
+  margin-left: 1.5rem;
+}
+#container .top .topCenter .topLeft .searchBox .search-img {
   position: absolute;
   top: 12;
   right: 0;
   bottom: 0;
-  left: 10;
+  left: 8;
   width: 1.5rem;
   height: 1.5rem;
 }
-#container .top .topCenter .topLeft .inline .inline input {
+#container .top .topCenter .topLeft .searchBox .search-img img {
+  filter: invert(1);
+  width: 100%;
+  height: 100%;
+}
+
+#container .top .topCenter .topLeft .searchBox input {
   height: 75%;
   font-size: 1rem;
-  width: 19rem;
+  width: 100%;
+  max-width: 19rem;
   padding: 0;
   padding-left: 2.5rem;
   border: 0;
@@ -154,97 +242,80 @@ form {
   border-radius: 5px;
   font-size: 0.9rem;
 }
-#container .top .topCenter .topLeft .inline .inline input:focus {
+#container .top .topCenter .topLeft .searchBox input:focus {
   border: 2px solid aqua;
   transition: 1s border;
 }
-#container .top .topCenter .topLeft .inline .inline input::placeholder {
+#container .top .topCenter .topLeft .searchBox input::placeholder {
   color: white;
   font-size: 0.9rem;
 }
 
-#container .top .topCenter .topLeft .inline .inline .chanelSelect {
-  width: 19rem;
+#container .top .topCenter .topLeft .searchBox .chanelSelect {
+  width: 100%;
+  max-width: 19rem;
   position: absolute;
   top: 38;
   right: 0;
   bottom: 0;
   left: 0;
-  padding-top: 0.7rem;
-  padding-bottom: 0.3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   border: 0;
   border-radius: 5px;
   border: 1px solid #3d414d;
   height: fit-content;
   background-color: white;
 }
-#container .top .topCenter .topLeft .inline .inline .chanelSelect .chanelList,
+#container .top .topCenter .topLeft .searchBox .chanelSelect .chanelList,
 #container
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
-  .bottomChanelSelect
   .chanelSearchButtonLine,
 #container
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
-  .bottomChanelSelect
   .chanelcloseButtonLine {
-  /* align-items: center; */
   padding: 0.2rem 0.8rem 0.2rem 0.8rem;
   width: 100%;
   color: black;
   height: 2rem;
-  /* cursor: pointer; */
 }
 #container
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
-  .bottomChanelSelect {
+  .bottomChanelLiner {
   width: auto;
   height: auto;
   border-top: 1px solid #4c5161;
-  margin-top: 0.3rem;
-  padding-top: 0.3rem;
-  padding-bottom: 0.3rem;
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
 }
+#container .top .topCenter .topLeft .searchBox .chanelSelect .chanelList:hover,
 #container
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
-  .chanelList:hover,
-#container
-  .top
-  .topCenter
-  .topLeft
-  .inline
-  .inline
-  .chanelSelect
-  .bottomChanelSelect
   .chanelSearchButtonLine:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-#container .top .topCenter .topLeft .inline .inline .chanelSelect .chanelList a,
+#container .top .topCenter .topLeft .searchBox .chanelSelect .chanelList a,
 #container
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
   .chanelList
   .no-search,
@@ -252,10 +323,8 @@ form {
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
-  .bottomChanelSelect
   .chanelSearchButtonLine
   a {
   display: flex;
@@ -265,15 +334,26 @@ form {
   align-items: center;
   font-size: 0.9rem;
 }
-#container .top .topCenter .topLeft .inline .inline .chanelSelect .chanelList a,
 #container
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
-  .bottomChanelSelect
+  .chanelList
+  a
+  span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#container .top .topCenter .topLeft .searchBox .chanelSelect .chanelList a,
+#container
+  .top
+  .topCenter
+  .topLeft
+  .searchBox
+  .chanelSelect
   .chanelSearchButtonLine
   a {
   text-decoration: none;
@@ -282,8 +362,7 @@ form {
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
   .chanelList
   .no-search {
@@ -293,21 +372,20 @@ form {
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
   .chanelList
   a
   .logo {
-  width: 20px;
-  height: 20px;
+  width: 1.8rem;
+  height: 1.8rem;
+  padding-right: 0.5rem;
 }
 #container
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
   .chanelList
   a
@@ -316,24 +394,13 @@ form {
   height: 20px;
   float: right;
 }
+#container .top .topCenter .topLeft .searchBox .chanelSelect .chanelList a span,
 #container
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
-  .chanelList
-  a
-  span,
-#container
-  .top
-  .topCenter
-  .topLeft
-  .inline
-  .inline
-  .chanelSelect
-  .bottomChanelSelect
   .chanelSearchButtonLine
   a {
   font-size: 0.9rem;
@@ -344,10 +411,8 @@ form {
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
-  .bottomChanelSelect
   .chanelSearchButtonLine
   a
   span {
@@ -358,10 +423,8 @@ form {
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
-  .bottomChanelSelect
   .chanelcloseButtonLine {
   display: flex;
   justify-content: right;
@@ -370,10 +433,8 @@ form {
   .top
   .topCenter
   .topLeft
-  .inline
-  .inline
+  .searchBox
   .chanelSelect
-  .bottomChanelSelect
   .chanelcloseButtonLine
   #chanelSearchCloseButton {
   display: inline-block;
@@ -383,14 +444,176 @@ form {
   font-size: 0.9rem;
   cursor: pointer;
 }
-
-#container .top .topCenter .topRight .notification a .notification-img img {
+#container .top .topCenter .topRight .notification {
+  padding-left: 1rem;
+}
+#container .top .topCenter .topRight .notification .notification-img img {
   width: 16px;
   height: 16px;
   object-fit: contain;
   filter: invert(1);
+  cursor: pointer;
 }
-#container .top .topCenter .topRight .login a .person-img span {
+#container .top .topCenter .topRight .notification .notification-img::after {
+  position: absolute;
+  cursor: pointer;
+  content: "";
+  top: -3;
+  right: 0;
+  left: 8;
+  bottom: 0;
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: red;
+  border-radius: 100%;
+  display: none;
+}
+#container .top .topCenter .topRight .notification .notificationBox {
+  position: absolute;
+  top: 25;
+  right: 0;
+  bottom: 0;
+  left: -140;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  z-index: 1;
+  padding-top: 0.1rem;
+  /* 임시 */
+  width: 17rem;
+  min-width: max-content;
+  height: fit-content;
+}
+#container
+  .top
+  .topCenter
+  .topRight
+  .notification
+  .notificationBox
+  .notificationBellTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+  padding-right: 0.7rem;
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+#container
+  .top
+  .topCenter
+  .topRight
+  .notification
+  .notificationBox
+  .notificationBellTitle
+  .readAllButton {
+  width: 3.8rem;
+  height: 1.6rem;
+  font-size: 0.7rem;
+  font-family: "NanumBarunGothic", system-ui, sans-serif;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.58);
+  outline: 0;
+  border: 2.5px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#container
+  .top
+  .topCenter
+  .topRight
+  .notification
+  .notificationBox
+  .notificationBellTitle
+  .readAllButton:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: background-color 1s;
+}
+#container
+  .top
+  .topCenter
+  .topRight
+  .notification
+  .notificationBox
+  .notificationBellTitle
+  .readAllButton:focus {
+  border: 2px solid #bbbbbb;
+  transition: border 0.3s;
+}
+#container
+  .top
+  .topCenter
+  .topRight
+  .notification
+  .notificationBox
+  .notificatetionMessages {
+  width: 17rem;
+  height: 13rem;
+  overflow-y: scroll;
+  margin: 0.5rem 0;
+}
+#container
+  .top
+  .topCenter
+  .topRight
+  .notification
+  .notificationBox
+  .notificatetionMessages
+  .newLink,
+#container .top .topCenter .topRight .notification .notificationBox .allLook {
+  height: fit-content;
+  font-size: 1rem;
+  word-break: break-all;
+}
+#container .top .topCenter .topRight .notification .notificationBox .allLook {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+#container
+  .top
+  .topCenter
+  .topRight
+  .notification
+  .notificationBox
+  .notificatetionMessages
+  .newLink
+  a,
+#container .top .topCenter .topRight .notification .notificationBox .allLook a {
+  color: black;
+  text-decoration: none;
+}
+#container
+  .top
+  .topCenter
+  .topRight
+  .notification
+  .notificationBox
+  .notificatetionMessages
+  .newLink
+  a {
+  display: inline-block;
+  padding: 0rem 1rem 1rem 1rem;
+  width: 100%;
+}
+#container .top .topCenter .topRight .notification .notificationBox .allLook a {
+  font-size: 0.8rem;
+}
+#container
+  .top
+  .topCenter
+  .topRight
+  .notification
+  .notificationBox
+  .allLook
+  a:hover {
+  text-decoration: underline;
+}
+#container .top .topCenter .topRight .login a span {
   font-size: 1.1rem;
 }
 #container .top .topCenter .topRight .login a .person-img img {
@@ -406,19 +629,25 @@ form {
   bottom: 0;
   left: -28;
   background-color: white;
-  /* 임시 */
-  width: 9rem;
+  padding-bottom: 0.3rem;
+  width: calc(100%+1rem);
+  min-width: 5rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3%;
   height: fit-content;
 }
-#container
-  .top
-  .topCenter
-  .topRight
-  .login
-  .userInfoBox
-  .userName.userInfoList {
-  padding-top: 1.5rem;
+#container .top .topCenter .topRight .login .userInfoBox .userName {
+  height: 2.5rem;
+  padding-top: 1rem;
   padding-bottom: 0.5rem;
+}
+#container .top .topCenter .topRight .login .userInfoBox .userName a {
+  padding: 0;
+}
+#container .top .topCenter .topRight .login .userInfoBox .userName a span {
+  color: black;
+  margin: 0;
+  padding: 0;
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -428,17 +657,15 @@ form {
   .topRight
   .login
   .userInfoBox
-  .userPoint.userInfoList {
+  .userName
+  a
+  span:hover {
+  text-decoration: underline;
 }
 #container .subTop {
   height: 1.7rem;
   display: none;
   background-color: #4c5161;
-}
-@media (max-width: 992px) {
-  #container .subTop {
-    display: block;
-  }
 }
 
 #container .body {
@@ -490,13 +717,47 @@ form {
   height: 180px;
   background-color: red;
 }
-
+@media screen and (max-width: 575px) {
+  #container .top .topCenter .topLeft .searchBox .search-img {
+    display: none;
+  }
+  #container .top .topCenter .topLeft .searchBox input {
+    display: none;
+  }
+  #container .top .topCenter .topLeft .searchBox .chanelSelect {
+    width: 100%;
+    max-width: unset;
+    position: absolute;
+    top: 48;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: unset;
+    border: none;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.199);
+  }
+  #container
+    .top
+    .topCenter
+    .topLeft
+    .searchBox
+    .chanelSelect
+    .bottomChanelLiner {
+    display: none;
+  }
+  #container .top .topCenter .topLeft .searchBox {
+    position: unset;
+  }
+}
 @media screen and (max-width: 991px) {
   #container .body .bodyCenter .informBox {
     display: none;
   }
   #container .body .bodyCenter .boardsIndex {
     border: none;
+  }
+  #container .subTop {
+    display: block;
   }
 }
 @media screen and (max-width: 1700px) {
