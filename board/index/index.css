@@ -24,6 +24,8 @@ form {
   width: 100%;
   height: 100%;
 }
+#container .top {
+}
 #container .top .topMenu {
   display: flex;
   justify-content: center;
@@ -275,7 +277,7 @@ form {
   height: 0;
   width: 0;
   border: 0.3rem solid white;
-  margin-left: 0.3rem;
+  margin-left: 0.2rem;
   border-right: 0.3rem solid transparent;
   border-left: 0.3rem solid transparent;
   border-bottom: 0.3rem solid transparent;
@@ -298,24 +300,40 @@ form {
 }
 #container .top .topMenu .topCenter .topLeft .search {
   flex: 1;
+}
+#container .top .topMenu .topCenter .topLeft .search .searchIconBox {
   margin-left: 1.5rem;
 }
-#container .top .topMenu .topCenter .topLeft .search .search-img {
+#container
+  .top
+  .topMenu
+  .topCenter
+  .topLeft
+  .search
+  .searchIconBox
+  .search-img {
   position: absolute;
   top: 0.5rem;
   /* right: 0;
   bottom: 0; */
-  left: 0.5rem;
+  left: 2rem;
   width: 1.5rem;
   height: 1.5rem;
 }
-#container .top .topMenu .topCenter .topLeft .search .search-img img {
+#container
+  .top
+  .topMenu
+  .topCenter
+  .topLeft
+  .search
+  .searchIconBox
+  .search-img
+  img {
   filter: invert(1);
   width: 100%;
   height: 100%;
 }
-
-#container .top .topMenu .topCenter .topLeft .search input {
+#container .top .topMenu .topCenter .topLeft .search .searchIconBox input {
   height: 2.3rem;
   font-size: 1rem;
   width: 100%;
@@ -334,23 +352,72 @@ form {
   font-size: 0.9rem;
   font-weight: 500;
 }
-#container .top .topMenu .topCenter .topLeft .search input:focus {
+#container
+  .top
+  .topMenu
+  .topCenter
+  .topLeft
+  .search
+  .searchIconBox
+  input:focus {
   border: 0.1rem solid aqua;
   transition: 1s border;
 }
-#container .top .topMenu .topCenter .topLeft .search input::placeholder {
+#container
+  .top
+  .topMenu
+  .topCenter
+  .topLeft
+  .search
+  .searchIconBox
+  input::placeholder {
   color: white;
   font-size: 0.9rem;
 }
-
+#container .top .topMenu .topCenter .topLeft .search .searchMiniBox {
+  display: none;
+  position: relative;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  width: auto;
+}
+#container
+  .top
+  .topMenu
+  .topCenter
+  .topLeft
+  .search
+  .searchMiniBox
+  .search-img {
+  position: absolute;
+  top: 0;
+  /* right: 0;
+  bottom: 0; */
+  left: 0rem;
+  width: 1rem;
+  height: 1rem;
+}
+#container
+  .top
+  .topMenu
+  .topCenter
+  .topLeft
+  .search
+  .searchMiniBox
+  .search-img
+  img {
+  filter: invert(1);
+  width: 100%;
+  height: 100%;
+}
 #container .top .topMenu .topCenter .topLeft .search .chanelSearchBox {
   width: 100%;
   max-width: 19rem;
   position: absolute;
-  top: 2.5rem;
+  top: calc(100% - 0.1rem);
   right: 0;
   /* bottom: 0; */
-  left: 0;
+  left: 1.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   border: 0;
@@ -947,10 +1014,21 @@ form {
   text-decoration: underline;
 }
 #container .subTop {
-  height: max-content;
-  font-size: 0.6rem;
+  height: 1.5rem;
+  width: 100%;
   display: none;
   background-color: #4c5161;
+  justify-content: left;
+  align-items: center;
+}
+#container .subTop .newBox {
+  font-size: 0.7rem;
+  display: inline-block;
+  background-color: #3d414d;
+  margin-left: 0.3rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.3rem;
+  color: white;
 }
 
 #container .body {
@@ -1003,9 +1081,6 @@ form {
   background-color: red;
 }
 @media screen and (max-width: 575px) {
-  #container .top .topMenu .topCenter {
-    min-width: max-content;
-  }
   #container
     .top
     .topMenu
@@ -1024,17 +1099,17 @@ form {
     .arrowButton::after {
     display: none;
   }
-  #container .top .topMenu .topCenter .topLeft .search .search-img {
+  #container .top .topMenu .topCenter .topLeft .search .searchIconBox {
     display: none;
   }
-  #container .top .topMenu .topCenter .topLeft .search input {
-    display: none;
+  #container .top .topMenu .topCenter .topLeft .search .searchMiniBox {
+    display: inline-block;
   }
   #container .top .topMenu .topCenter .topLeft .search .chanelSearchBox {
     width: 100%;
     max-width: unset;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 1.5rem);
     /* right: 0; */
     /* bottom: 0; */
     left: 0;
@@ -1065,6 +1140,10 @@ form {
     .userName-login {
     display: none;
   }
+  #container .top .topMenu .topCenter .topLeft .subscribeChanel,
+  #container .top .topMenu .topCenter .topLeft .primaryChanel {
+    padding-left: 0.8rem;
+  }
 }
 @media screen and (max-width: 763px) {
   #container
@@ -1094,7 +1173,7 @@ form {
     border: none;
   }
   #container .subTop {
-    display: block;
+    display: flex;
   }
 }
 @media screen and (max-width: 1700px) {
